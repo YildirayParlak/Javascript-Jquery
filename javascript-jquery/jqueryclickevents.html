@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .paragrafRenklendir{
+            color: purple;
+            font-size: 22px;
+        }
+    </style>
+
+</head>
+<body>
+    
+        
+        <div>
+            
+            <p>Hello World</p>
+            <img src="logo.png" alt="" width="180px">
+            </div>
+            <br><br>
+            <button id="fadein">fadeIn</button>
+            <button id="fadeout">fadeOut</button>
+            <button id="fadeto">fadeto</button>
+            <button id="toggle">fadeToggle</button>
+    <script>
+       
+
+
+            //jquery efektleri:
+            $(document).ready(function(){
+                
+
+                    // fade efekterli
+                    $("#fadein").click(function(){
+                        $("div").fadeIn(1000);
+                        $("img").css("background-color","red");
+                    });
+
+                    $("#fadeout").click(function(){
+                        $("div").fadeOut(1000,function(){
+                            alert('div kapatıldı');
+                        });
+                        $("img").css("background-color","inherit");
+                    });
+                    $("#toggle").click(function(){
+                        $("div").fadeToggle(1500);
+                    });
+                    $("#fadeto").click(function(){
+                        $("div").fadeTo(1000,0.5);
+                    });
+
+
+
+            });
+
+    </script>
+
+
+
+
+
+</body>

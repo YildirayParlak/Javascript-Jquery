@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .paragrafRenklendir{
+            color: purple;
+            font-size: 22px;
+        }
+        #kutu{
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="kutu"></div>
+
+    <button id="animate">animasyon</button>
+
+     
+
+
+
+
+
+    <script>
+     $(document).ready(function(){
+        $("#animate").mouseenter(function(){
+            $("#kutu").animate(
+                {
+                    left :"20px",
+                    top:"400px",
+                    
+                
+                },
+                3000//burada istersek 300 yerine "slow" veya "fast" de yazabilirdik
+            )
+            //burada isteresk baska bir aniamsauyon daha ekleyebiliriz:üstteki animasyon olduktan sonra bu oluyor sırayl yani
+            $("#kutu").animate({top:"20px",bottom:"50px"},"slow");
+        });
+
+
+     });      
+
+    </script>
+</body>
